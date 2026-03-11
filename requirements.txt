@@ -1,0 +1,20 @@
+# SlideForge AI - Requirements
+# Install all dependencies with:
+#   pip install -r requirements.txt
+# Or with uv:
+#   uv pip install -r requirements.txt
+
+# --- Core ---
+streamlit
+requests
+python-pptx
+pydantic
+
+# --- FastAPI Backend (api.py) ---
+fastapi
+uvicorn
+python-multipart
+
+# --- Google Gemini (via Agno) ---
+agno
+google-generativeai
