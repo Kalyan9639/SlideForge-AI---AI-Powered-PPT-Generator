@@ -17,4 +17,4 @@ python-multipart
 
 # --- Google Gemini (via Agno) ---
 agno
-google-generativeai
+google-genai
