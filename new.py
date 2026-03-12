@@ -58,7 +58,7 @@ def sanitize_text(text):
         return str(text)
     return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', text)
 
-def apply_formatting(run, font_name='Times New Roman', size=20, bold=False):
+def apply_formatting(run, font_name='Times New Roman', size=12, bold=False):
     """Applies specific font, size, and boldness to a python-pptx Run."""
     run.font.name = font_name
     run.font.size = Pt(size)
@@ -333,7 +333,7 @@ if st.button("🚀 Build My Presentation", type="primary"):
                         slide.shapes.title.text = sanitize_text(s_data['heading'])
                         for p in slide.shapes.title.text_frame.paragraphs:
                             for r in p.runs:
-                                apply_formatting(r, size=18, bold=True)
+                                apply_formatting(r, size=20, bold=True)
 
                     body = next((sh for sh in slide.shapes.placeholders if sh.placeholder_format.idx == 1), None)
                     if body and body.has_text_frame:
@@ -348,7 +348,7 @@ if st.button("🚀 Build My Presentation", type="primary"):
                             p.level = 0 if is_para_or_sub else 1
 
                             if p.runs:
-                                size = 18 if item['type'] == 'subheading' else 12
+                                size = 18 if item['type'] == 'subheading' else 16
                                 bold = item['type'] == 'subheading'
                                 apply_formatting(p.runs[0], size=size, bold=bold)
 
