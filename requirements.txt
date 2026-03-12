@@ -8,11 +8,12 @@
 streamlit
 requests
 python-pptx
+python-docx
 pydantic
 
 # --- FastAPI Backend (api.py) ---
-fastapi
-uvicorn
+# fastapi
+# uvicorn
 python-multipart
 
 # --- Google Gemini (via Agno) ---
